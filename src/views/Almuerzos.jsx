@@ -12,7 +12,7 @@ import AlmuerzoPng from "/src/assets/Dishes/almuerzosPng.png";
 //Imagenes
 import Burrito from "/src/assets/index/burrito.jpg";
 
-import Tortas from "/src/assets/index/Tortas.jpg";
+import Tortas from "/src/assets/index/tortas.jpg";
 import PolloAsado from "/src/assets/index/polloAsado.jpg";
 
 
@@ -47,7 +47,7 @@ export default function Desayunos() {
           </section>
           <section className="bg-base-100 text-white mt-[-1rem] rounded-t-2xl items-center justify-between mx-0 xl:mx-[0rem] animate-fade-up animate-ease-in-out animate-once animate-duration-[500ms]">
             <h2 className="text-3xl md:text-5xl font-bold drop-shadow-2xl pt-12 px-8 text-center">
-            {t("almuerzo.popular-title")}
+              {t("almuerzo.popular-title")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 xl:mx-[6rem] gap-4 md:gap-8 xl:gap-12 px-8 pt-8 pb-[10rem]">
               <FoodCard
