@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import OrderContent from "./OrderContent";
 import useOwner from "../../hooks/useOwner";
-import OrderHeader from "./orderHeader";
+import OrderHeader from "./OrderHeader";
 
 function OrderProps(props) {
   const { idPlatillo } = props;
@@ -18,32 +18,32 @@ function OrderProps(props) {
           <thead className="text-white">
             {pedidos
               ? pedidos.map((pedido, id) => {
-                  if (pedido.mainDish.id == idPlatillo) {
-                    return <OrderHeader key={pedido.id + "-main"} />;
-                  }
-                })
+                if (pedido.mainDish.id == idPlatillo) {
+                  return <OrderHeader key={pedido.id + "-main"} />;
+                }
+              })
               : ""}
           </thead>
           {/* PEDIDOS */}
           <tbody className="flex-1 sm:flex-none text-[#1f1f1f]  font-semibold">
             {pedidos
               ? pedidos.map((pedido, id) => {
-                  // Encabezado de la tabla para cada producto
-                  if (pedido.mainDish.id == idPlatillo) {
-                    return (
-                      <OrderContent
-                        key={id}
-                        price={pedido.price}
-                        estado={pedido.pagado}
-                        nameUser={pedido.user.name}
-                        content1={pedido.sideDish1.name}
-                        content2={pedido.sideDish2.name}
-                        drink={pedido.drink?.name}
-                        accompaniment={pedido.accompaniment?.name}
-                      />
-                    );
-                  }
-                })
+                // Encabezado de la tabla para cada producto
+                if (pedido.mainDish.id == idPlatillo) {
+                  return (
+                    <OrderContent
+                      key={id}
+                      price={pedido.price}
+                      estado={pedido.pagado}
+                      nameUser={pedido.user.name}
+                      content1={pedido.sideDish1.name}
+                      content2={pedido.sideDish2.name}
+                      drink={pedido.drink?.name}
+                      accompaniment={pedido.accompaniment?.name}
+                    />
+                  );
+                }
+              })
               : ""}
           </tbody>
         </table>
