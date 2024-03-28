@@ -20,7 +20,7 @@ import '../css/homepage.css';
 import HeroImg from "../../src/assets/homepage/food-removebg-preview.png";
 import Coffee from "../../src/assets/homepage/coffee.jpg";
 import Almuerzos from "../../src/assets/homepage/Almuerzos.png";
-import Desayunos from "../../src/assets/homepage/Desayuno.png";
+import Desayunos from "../../src/assets/homepage/desayuno.png";
 
 //Iconos
 import { IoFastFoodOutline } from "react-icons/io5";
